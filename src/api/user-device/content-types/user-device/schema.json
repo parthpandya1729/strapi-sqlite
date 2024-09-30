@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_devices",
+  "info": {
+    "singularName": "user-device",
+    "pluralName": "user-devices",
+    "displayName": "UserDevice"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

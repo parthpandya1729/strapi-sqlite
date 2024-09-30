@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "device_codes",
+  "info": {
+    "singularName": "device-code",
+    "pluralName": "device-codes",
+    "displayName": "DeviceCode",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "UseCode": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Device_code": {
+      "type": "string",
+      "required": true
+    },
+    "User_ID": {
+      "type": "string",
+      "required": true
+    },
+    "Device_Name": {
+      "type": "string",
+      "required": true
+    },
+    "Device_Type": {
+      "type": "string",
+      "required": true
+    },
+    "Device_OS": {
+      "type": "string",
+      "required": true
+    },
+    "Device_Token": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
