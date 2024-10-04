@@ -1,20 +1,22 @@
 module.exports = {
     routes: [
-        {
-            method: 'POST',
-            path: '/generate-code',
-            handler: 'device-code.generateCode',
-            config: {
-                auth: false, // Set to true if you require authentication
-            },
+      {
+        method: 'POST',
+        path: '/device-code/generate',  // Endpoint to generate codes
+        handler: 'device-code.generateCode',  // Links to the generateCode method
+        config: {
+          policies: [],
+          middlewares: [],
         },
-        {
-            method: 'GET',
-            path: '/get-device-details',
-            handler: 'device-code.getDeviceDetails',
-            config: {
-                auth: false, // Set to true if you require authentication
-            },
+      },
+      {
+        method: 'GET',
+        path: '/device-code/get-device-details',  // Endpoint to retrieve device details
+        handler: 'device-code.getDeviceDetails',  // Links to the getDeviceDetails method
+        config: {
+          policies: [],
+          middlewares: [],
         },
+      },
     ],
-};
+  };

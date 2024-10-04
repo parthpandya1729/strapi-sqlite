@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * user-device service.
+ * sign-raft service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::user-device.user-device');
+module.exports = createCoreService('api::sign-raft.sign-raft');
