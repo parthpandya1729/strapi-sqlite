@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "uploaded_medias",
+  "info": {
+    "singularName": "uploaded-media",
+    "pluralName": "uploaded-medias",
+    "displayName": "Uploaded_Media",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Video",
+        "Image"
+      ],
+      "required": true
+    },
+    "Thumbnail": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Default_Time_Limit": {
+      "type": "integer",
+      "required": true
+    },
+    "Size": {
+      "type": "float",
+      "required": true
+    },
+    "Sharing": {
+      "type": "enumeration",
+      "enum": [
+        "Public ",
+        "Private"
+      ],
+      "required": true
+    },
+    "CustomWidth": {
+      "type": "decimal"
+    },
+    "CustomHeight": {
+      "type": "decimal"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sign_rafts",
+  "info": {
+    "singularName": "sign-raft",
+    "pluralName": "sign-rafts",
+    "displayName": "Sign_Kraft",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "User_Code": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Displayname": {
+      "type": "string",
+      "required": true
+    },
+    "Display_type": {
+      "type": "string",
+      "required": true
+    },
+    "Status": {
+      "type": "string",
+      "required": true
+    },
+    "Authorised": {
+      "type": "boolean",
+      "required": true
+    },
+    "LoggedIn": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}
