@@ -12,34 +12,21 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "UseCode": {
+    "useCode": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Device_code": {
+    "deviceCode": {
       "type": "string",
       "required": true
     },
-    "User_ID": {
+    "deviceName": {
       "type": "string",
       "required": true
     },
-    "Device_Name": {
-      "type": "string",
-      "required": true
-    },
-    "Device_Type": {
-      "type": "string",
-      "required": true
-    },
-    "Device_OS": {
-      "type": "string",
-      "required": true
-    },
-    "Device_Token": {
-      "type": "string",
-      "required": true
+    "isRegistered": {
+      "type": "boolean"
     }
   }
 }

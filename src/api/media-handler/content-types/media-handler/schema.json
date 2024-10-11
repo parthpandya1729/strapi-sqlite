@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "media_handlers",
+  "info": {
+    "singularName": "media-handler",
+    "pluralName": "media-handlers",
+    "displayName": "Media Handler",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "MediaName": {
+      "type": "string"
+    },
+    "Duration": {
+      "type": "integer"
+    },
+    "media": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos",
+        "audios",
+        "files"
+      ]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "campaigns",
+  "info": {
+    "singularName": "campaign",
+    "pluralName": "campaigns",
+    "displayName": "Campaign",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "StartDate": {
+      "type": "datetime"
+    },
+    "EndDate": {
+      "type": "datetime"
+    },
+    "CampaignName": {
+      "type": "string"
+    },
+    "Region": {
+      "type": "enumeration",
+      "enum": [
+        "East",
+        "West",
+        "South",
+        "North"
+      ]
+    },
+    "Religion": {
+      "type": "enumeration",
+      "enum": [
+        "Hindu",
+        "Muslim",
+        "Christian",
+        "Jain",
+        "Buddhist",
+        "Sikh"
+      ]
+    },
+    "Media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
