@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schedules",
+  "info": {
+    "singularName": "schedule",
+    "pluralName": "schedules",
+    "displayName": "Schedule",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ScheduleName": {
+      "type": "string"
+    },
+    "StartDate": {
+      "type": "datetime"
+    },
+    "EndDate": {
+      "type": "datetime"
+    },
+    "Duration": {
+      "type": "integer"
+    },
+    "campaign": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::campaign.campaign",
+      "inversedBy": "schedules"
+    }
+  }
+}

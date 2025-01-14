@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "device_preferences",
+  "info": {
+    "singularName": "device-preference",
+    "pluralName": "device-preferences",
+    "displayName": "Device_Preference"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Start_time": {
+      "type": "datetime"
+    },
+    "End_time": {
+      "type": "datetime"
+    }
+  
+  }
+}

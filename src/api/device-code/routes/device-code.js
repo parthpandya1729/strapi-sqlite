@@ -1,22 +1,49 @@
 module.exports = {
-    routes: [
-      {
-        method: 'POST',
-        path: '/device-code/generate',  // Endpoint to generate codes
-        handler: 'device-code.generateCode',  // Links to the generateCode method
-        config: {
-          policies: [],
-          middlewares: [],
-        },
-      },
+  routes: [
+        {
+          method: 'POST',
+          path: '/device-code/generate-code',
+          handler: 'device-code.generateCode',
+          config: {
+            policies: [], // Change based on your permissions
+          },
+        },      
       {
         method: 'GET',
-        path: '/device-code/get-device-details',  // Endpoint to retrieve device details
-        handler: 'device-code.getDeviceDetails',  // Links to the getDeviceDetails method
+        path: '/device-code/get-device-details',
+        handler: 'device-code.getDeviceDetails',
         config: {
           policies: [],
-          middlewares: [],
         },
       },
-    ],
-  };
+
+      {
+        method: 'POST',
+        path: '/device-code/register',
+        handler: 'device-code.registerDevice',
+      },
+      {
+        method: 'POST',
+        path: '/device-code/verify',
+        handler: 'device-code.verifyDevice',
+      },
+      // {
+      //   method: 'POST',
+      //   path: '/api/device-codes/validate',
+      //   handler: 'device-code.validateRegistration',
+      //   config: {
+      //     policies: [],
+      //     middlewares: []
+      //   }
+      // },
+      {
+        method: 'GET',
+        path: '/device-code/:deviceId/campaigns',
+        handler: 'device-code.getDeviceCampaigns',
+        config: {
+          policies: [],
+          auth: false
+        }
+      },
+  ],
+};
