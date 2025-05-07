@@ -4,29 +4,52 @@
   "info": {
     "singularName": "device-code",
     "pluralName": "device-codes",
-    "displayName": "DeviceCode",
-    "description": ""
+    "displayName": "Device Registration",
+    "description": "",
+    "displayField": "Device_name"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "useCode": {
+    "User_code": {
       "type": "string",
-      "required": true,
-      "unique": true
+      "required": false
     },
-    "deviceCode": {
+    "Device_name": {
+      "type": "string",
+      "required": false
+    },
+    "Device_id": {
+      "type": "integer"
+    },
+    "Hardware_id": {
       "type": "string",
       "required": true
     },
-    "deviceName": {
-      "type": "string",
-      "required": true
+    "deviceHash": {
+      "type": "string"
     },
-    "isRegistered": {
-      "type": "boolean"
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "Draft",
+        "Published"
+      ],
+      "default": "Draft"
+    },
+    "Media": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::media-handler.media-handler",
+      "inversedBy": "device_Name"
+    },
+    "campaigns": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::campaign.campaign",
+      "inversedBy": "device_registrations"
     }
   }
 }

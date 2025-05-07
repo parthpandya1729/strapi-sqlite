@@ -8,8 +8,8 @@ module.exports = {
         handler: 'media-handler.find',
         config: {
           policies: [],
-          middlewares: [],
-        },
+          auth: false
+        }
       },
       {
         method: 'GET',

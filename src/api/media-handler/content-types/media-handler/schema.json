@@ -4,29 +4,44 @@
   "info": {
     "singularName": "media-handler",
     "pluralName": "media-handlers",
-    "displayName": "Media Handler",
+    "displayName": "MediaHandler",
     "description": ""
   },
   "options": {
-    "draftAndPublish": false
+    "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
-    "MediaName": {
-      "type": "string"
-    },
     "Duration": {
       "type": "integer"
     },
-    "media": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
+    "MediaName": {
+      "type": "string"
+    },
+    "Device_Id": {
+      "type": "integer"
+    },
+    "MediaFile": {
       "allowedTypes": [
         "images",
+        "files",
         "videos",
-        "audios",
-        "files"
-      ]
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "campaigns": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::campaign.campaign",
+      "mappedBy": "CampaignFile"
+    },
+    "device_Name": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::device-code.device-code",
+      "inversedBy": "Media"
     }
   }
 }

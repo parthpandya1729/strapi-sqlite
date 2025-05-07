@@ -12,45 +12,26 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "StartDate": {
-      "type": "datetime"
-    },
-    "EndDate": {
-      "type": "datetime"
-    },
     "CampaignName": {
       "type": "string"
     },
-    "Region": {
-      "type": "enumeration",
-      "enum": [
-        "East",
-        "West",
-        "South",
-        "North"
-      ]
+    "CampaignFile": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::media-handler.media-handler",
+      "inversedBy": "campaigns"
     },
-    "Religion": {
-      "type": "enumeration",
-      "enum": [
-        "Hindu",
-        "Muslim",
-        "Christian",
-        "Jain",
-        "Buddhist",
-        "Sikh"
-      ]
+    "device_registrations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::device-code.device-code",
+      "inversedBy": "campaigns"
     },
-    "Media": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+    "schedules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::schedule.schedule",
+      "mappedBy": "campaign"
     }
   }
 }

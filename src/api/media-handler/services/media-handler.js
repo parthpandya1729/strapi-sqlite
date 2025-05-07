@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * media-handler service
+ * media-handler service.
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;

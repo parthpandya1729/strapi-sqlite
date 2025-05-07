@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "device_activities",
+  "info": {
+    "singularName": "device-activity",
+    "pluralName": "device-activities",
+    "displayName": "Device Activity",
+    "description": "Tracks all device activities and media playback"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "deviceId": {
+      "type": "string",
+      "required": true
+    },
+    "deviceName": {
+      "type": "string"
+    },
+    "activityType": {
+      "type": "enumeration",
+      "enum": [
+        "DEVICE_REGISTERED",
+        "APP_LAUNCH",
+        "MEDIA_PLAY_START",
+        "MEDIA_PLAY_END",
+        "CAMPAIGN_START",
+        "CAMPAIGN_END",
+        "ERROR",
+        "OFFLINE_MODE",
+        "CACHE_CLEARED"
+      ],
+      "required": true
+    },
+    "campaignId": {
+      "type": "string"
+    },
+    "mediaId": {
+      "type": "string"
+    },
+    "playbackDuration": {
+      "type": "integer"
+    },
+    "startTime": {
+      "type": "datetime"
+    },
+    "endTime": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "SUCCESS",
+        "FAILED",
+        "IN_PROGRESS"
+      ],
+      "default": "SUCCESS"
+    },
+    "errorDetails": {
+      "type": "text"
+    },
+    "metadata": {
+      "type": "json"
+    }
+  }
+}
